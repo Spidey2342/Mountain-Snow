@@ -13,7 +13,7 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Mountain Snow provides the purest water in the Volta Region. Safe, refreshing, and trusted for families and businesses." />
-
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Mountain Snow</title>
   </head>
   <body>
@@ -66,7 +66,7 @@
       </div>
     </header>
     <section class="start">
-      <div class="start_content">
+      <div class="start_content" data-aos="fade-down">
         <h1>Pure Refreshment, Straight from Nature.</h1>
         <h2>
           Drawn from underground sources and purified with advanced technology,
@@ -100,7 +100,7 @@
     </section>
     <section class="highlights">
       <div class="high_content">
-        <div class="img">
+        <div class="img"  data-aos="flip-left">
           <img src="images/A4 - 1.jpg" alt="" />
         </div>
         <div class="cont_text">
@@ -123,7 +123,7 @@
         while ensuring top quality and customer satisfaction.
       </h4>
     </section>
-    <section class="service">
+    <section class="service" data-aos="zoom-in">
       <div class="serve_img"></div>
       <div class="serve_text">
         <h3>Delivery Services</h3>
@@ -189,6 +189,10 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
     <script>
       document.addEventListener('DOMContentLoaded', function(){
         const OpenMenu = document.getElementById('OpenMenu');
@@ -206,4 +210,3 @@ CloseMenu.addEventListener('click', ()=>{
     </script>
   </body>
 </html>
-
