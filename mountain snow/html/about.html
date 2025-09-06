@@ -16,6 +16,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>About Mountain Snow</title>
   </head>
   <body>
@@ -101,7 +102,7 @@
     </section>
     <section class="mission">
       <div class="mission_flex">
-        <div class="mission_text">
+        <div class="mission_text" data-aos="zoom-out">
           <h3>OUR MISSION</h3>
           <p>
             To provide clean, safe, and affordable drinking water to our
@@ -109,7 +110,7 @@
             customer satisfaction.
           </p>
         </div>
-        <div class="mission_img"></div>
+        <div class="mission_img" data-aos="zoom-out"></div>
       </div>
     </section>
     
@@ -160,6 +161,10 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
     <script>
       document.addEventListener('DOMContentLoaded', function(){
         const OpenMenu = document.getElementById('OpenMenu');
