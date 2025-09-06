@@ -1,0 +1,588 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    cursor: default;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+    --first-color:#E6F0FA;
+    --second-color:#0033CC;
+    --text-color:#02248a;
+    --third-color:#d41818f3;
+}
+.mobile{
+    height:95px ;
+    display: none;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+  background: var(--first-color);
+  position:fixed;
+  width: 100%;
+  z-index: 120;
+
+}
+
+.ham{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    gap: 15px;
+}
+.ham p{
+    font-size: 1.3em;
+    color: var(--second-color);
+    font-weight: 700;
+}
+.ham i{
+    font-size: 1.2em;
+}
+
+.sidebar{
+    position: fixed;
+    z-index: 120;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    background: #b8dbff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    opacity: 0;
+    visibility: hidden;
+     transform: translateX(100%);
+    transition: 0.4s;
+    
+}
+.sidebar.active{
+    opacity: 1;
+    visibility: visible;
+     transform: translateX(0);
+}
+.close_menu{
+    height: 40px;
+    padding: 30px 0 5px 0;
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.close_menu i{
+    font-size: 1.2em;
+}
+.side_links{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;   
+    width: 90% ;
+}
+.side_links li{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer; 
+    transition: 0.3s;
+}
+.side_links li:hover{
+    background: #011349;
+    transform: translateY(-5px);
+}
+.sidebar ul{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.sidebar ul li{
+    padding: 20px 20px;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+    
+}
+.sidebar ul li a{
+    color: var(--text-color);
+    font-weight: 650;
+    font-size: 0.98em;
+    transition: 0.3s;
+}
+.sidebar ul li:hover{
+    background: #041d66;
+    color: white;
+}
+.sidebar ul li a:hover{
+    color: white;
+}
+
+.main{
+    height: 100px;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  background: var(--first-color);
+}
+.logo img{
+    height: 70px;
+}
+
+.main-tag ul{
+    display: flex;
+justify-content: center;
+gap: 30px;
+}
+.main-tag ul li a{
+    color: var(--text-color);
+    font-weight: 650;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.links li{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer; 
+    transition: 0.3s;
+}
+.links li:hover{
+    background: #011349;
+    transform: translateY(-5px);
+}
+.start{
+    height: auto;
+    padding: 20vh 0 10vh 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 5, 48, 0.795),rgba(0, 1, 77, 0.596),rgba(2, 0, 37, 0.37)), url(images/denis-linine-W4o1oWx0k0g-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.start_content{
+    height: 60vh;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: default;
+}
+.start_content h1{
+    width: 50%;
+    font-size: 3em;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+}
+.start_content h2{
+    width: 60%;
+    font-size: 1em;
+    font-weight: 550;
+    color: white;
+    margin-bottom: 30px;
+}
+.buttons{
+    display: flex;
+    gap: 30px;
+}
+.btn{
+    padding: 15px 23px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    font-weight: 700;
+    background: var(--second-color);
+    color: white;
+    cursor: pointer;
+}
+.btn1{
+        padding: 15px 23px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    font-weight: 700;
+    background: var(--third-color);
+    color: white;
+    cursor: pointer;
+}
+.values{
+    height: auto;
+    padding: 5vh 0 10vh 0;
+    background: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.value{
+    text-align: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.value h3{
+    color: white;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.value_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 90px;
+    
+}
+.value_flex li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.value_flex li img{
+    height: 60px;
+}
+.value_flex li p{
+    color: white;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: center;
+}
+.highlights{
+    height: auto;
+    padding: 10vh 0 20vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.high_content{
+    display: flex;
+    gap: 70px;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+}
+.img img{
+    height: 450px;
+    box-shadow: -17px 23px 0px -6px rgba(255,0,0,0.74);
+-webkit-box-shadow: -17px 23px 0px -6px rgba(255,0,0,0.74);
+-moz-box-shadow: -17px 23px 0px -6px rgba(255,0,0,0.74);
+}
+.cont_text h3{
+    font-size: 4.3em;
+    color: #02248a;
+    font-weight: 900;
+}
+.cont_text p{
+    color: rgb(34, 34, 34);
+    line-height: 35px;
+}
+.extra{
+    height: auto;
+    padding: 5vh 0vh 5vh 0;
+    background: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.extra h4{
+    font-size: 1.2em;
+    color: white;
+    width: 50%;
+    text-align: center;
+}
+.service{
+    height: auto;
+    padding: 10vh 0 10vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.serve_img{
+    width: 50%;
+    height: 370px;
+    background: url(images/fabrizio-conti-rMWmDMeaoBk-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+.serve_text{
+    width: 50%;
+    height: auto;
+    padding: 20px 60px;
+    background: #041d66;
+}
+.serve_text h3{
+     font-size: 1.9em;
+ color: white;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.serve_text p{
+    color: white;
+        font-size: 0.95em;
+        line-height: 30px;
+        margin-bottom: 50px;
+}
+.btn3{
+    padding: 15px 25px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-weight: 800;
+    font-size: 0.9em;
+    transition:transform 0.3s ease;
+}
+.btn3:hover{
+    color: white;
+    background: var(--third-color);
+    transform: translateY(-3px);
+}
+footer{
+    height: auto;
+    padding: 10vh 0 10vh 0;
+    background: #011349;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.footer{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+.foot1 .logo{
+    margin-bottom: 10px;
+}
+.foot1 h4{
+    width: 350px;
+    color: white;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+.foot2 h5{
+color: white;
+font-size: 1.1em;
+font-weight: 800;
+margin-bottom: 20px;
+}
+.foot2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.foot2 ul li a{
+    color: white;
+    font-size: 0.94em;
+    font-weight: 380;
+    cursor: pointer;
+}
+.foot3 h5{
+    color: white;
+font-size: 1.1em;
+font-weight: 800;
+margin-bottom: 20px;
+}
+.foot3 ul li{
+    text-align: center;
+      color: white;
+    font-size: 0.94em;
+    font-weight: 380;
+    cursor: pointer;
+}
+.foot4 h5{
+color: white;
+font-size: 1.1em;
+font-weight: 800;
+margin-bottom: 20px;
+}
+.foot4 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.foot4 ul li{
+  
+      color: white;
+    font-size: 0.94em;
+    font-weight: 380;
+    cursor: pointer;
+}
+.shares{
+    margin-top: 20px;
+}
+.shares ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.shares ul li{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--second-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer; 
+    transition: 0.3s;
+}
+@media (max-width:970px) {
+    .high_content{
+        width: 90%;
+        gap: 40px;
+    }
+
+    .footer{
+        width: 95%;
+    }
+}
+@media (max-width:770px){
+    .mobile{
+        display: flex;
+    }
+    .main{
+        display: none;
+    }
+    .start_content h1{
+        font-size: 2.5em;
+        width: 70%;
+    }
+    .start_content h2{
+        width: 80%;
+        font-size: 0.96em;
+        margin-bottom: 20px;
+    }
+    .high_content{
+        width: 80%;
+        flex-direction: column;
+    }
+    .img img{
+        height: 390px;
+    }
+    .cont_text h3{
+    font-size: 3.9em;
+}   
+.service{
+    flex-direction: column;
+    gap: 20px;
+}
+.serve_img{
+    width: 80%;
+}
+.serve_text{
+    width: 100%;
+}
+.footer{
+    flex-wrap: wrap;
+    gap: 20px
+    ;
+}
+}
+
+@media (max-width:430px){
+    .buttons{
+        gap: 10px;
+    }
+.btn{
+    padding: 10px 20px;
+}
+    .start_content h1{
+        font-size: 1.8em;
+        width: 100%;
+    }
+    .start_content h2{
+        font-size: 0.8em;
+        font-weight: 400;
+        width: 90%;
+    }
+    .value{
+        width: 95%;
+    }
+    .value h3{
+        font-size: 1.3em;
+        font-family: 900;
+        margin-bottom: 20px;
+    }
+    .value_flex{
+        gap: 20px;
+    }
+    .value_flex li img{
+    height: 30px;
+}
+.value_flex li p{
+    font-size: 0.87em;
+}
+    .high_content{
+        width: 85%;
+    }
+    .cont_text h3{
+        font-size: 2.4em;
+    }
+    .cont_text p{
+        line-height: 27px;
+        color: rgb(68, 68, 68);
+    }
+    .serve_img{
+        width: 100%;
+    }
+    .serve_text{
+        padding: 20px ;
+    }
+    .serve_text p{
+margin-bottom: 30px;
+    }
+    .img img{
+        height: 310px;
+    }
+    .extra h4{
+        width: 80%;
+        font-size: 1em;
+
+    }
+    .foot1 h4{
+        width: 300px;
+    }
+}
