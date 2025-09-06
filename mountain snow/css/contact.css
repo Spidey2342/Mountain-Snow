@@ -141,6 +141,7 @@
     justify-content: space-around;
     align-items: center;
   background: var(--first-color);
+  z-index: 140;
 }
 .logo img{
     height: 70px;
